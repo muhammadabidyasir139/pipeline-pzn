@@ -12,7 +12,7 @@ pipeline {
             steps {
 
                  script {
-                    def data [
+                    def data = [
                         "firstName" : "Eko",
                         "LastName" : "Khanneddi"
                     ]
