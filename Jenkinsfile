@@ -1,11 +1,11 @@
 pipeline {
-    agent any 
+    agent none 
     stages {
-        stage('Build') {
+        stage('Prepare') {
             steps {
-                echo("Start Build")
-                sh("./mvnw clean compile test-compile")
-                echo("Finish Build")
+                echo("Start Job : ${env.JOB_NAME}")
+                echo("Start Bulild : ${env.JOB_NUMBER}")
+                echo("Start Name : ${env.BRANCH_NAME}")
             }
         }
         stage('Test') {
