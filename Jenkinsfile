@@ -17,21 +17,21 @@ pipeline {
             }
         }
     }
+
+
+    post {
+        always {
+            echo "I will always say hello again"
+        }
+        success {
+            echo "yay, success"
+        }
+        failure {
+            echo "Oh no, Failure"
+        }
+        cleanup {
+            echo "Don't care success or error"
+        }
+    }
+
 }
-
-//     post {
-//         always {
-//             echo "I will always say hello again"
-//         }
-//         success {
-//             echo "yay, success"
-//         }
-//         failure {
-//             echo "Oh no, Failure"
-//         }
-//         cleanup {
-//             echo "Don't care success or error"
-//         }
-//     }
-
-// }
