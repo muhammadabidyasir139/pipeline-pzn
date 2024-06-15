@@ -3,6 +3,15 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+
+
+                script {
+                    def data:LinkedHashMap<String, String> = [
+                        "firstName" : "Eko",
+                        "LastName" : "Khanneddi"
+                    ]
+                }
+
                 echo("Start Build")
                 sh("./mvnw clean compile test-compile")
                 echo("Finish Build")
@@ -11,7 +20,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo("Start Test")
-                sh("./mvnw test")
+                ("./mvnw test")
                 echo("Finish test")
             }
         }
