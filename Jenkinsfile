@@ -12,11 +12,9 @@ pipeline {
             steps {
 
                  script {
-                    def data = [
-                        "firstName" : "Eko",
-                        "LastName" : "Khanneddi"
-                    ]
-                    writeJSON(files: "data.json", json: data)
+                  fot(int i = 0; i < 10; i ++) {
+                    echo("ini berhasil")
+                  }
                 }
                  
                 echo("Start Test")
