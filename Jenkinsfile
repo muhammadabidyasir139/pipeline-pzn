@@ -20,7 +20,7 @@ pipeline {
                 }
                  
                 echo("Start Test")
-                ("./mvnw test")
+                sh("./mvnw test")
                 echo("Finish test")
             }
         }
