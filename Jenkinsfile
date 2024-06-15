@@ -4,15 +4,15 @@ pipeline {
         stage('Build') {
             steps {
                 echo("Start Build")
-                ssh("./mvnw clean compile test-compile")
-                echo("Finish Build ")
+                echo("Hello Build 2")
+                echo("Hello Build 3")
             }
         }
         stage('Test') {
             steps {
-                echo("Start Test")
-                sh("./mvnw test")
-                echo("Finish Test")
+                echo("Hello Test 1")
+                echo("Hello Test 2")
+                echo("Hello Test 3")
                 
                 
             }
